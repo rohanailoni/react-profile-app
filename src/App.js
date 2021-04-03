@@ -19,6 +19,7 @@ class App extends Component {
 
     ReactGA.initialize("UA-110570651-1");
     ReactGA.pageview(window.location.pathname);
+    //console.log(window.location.pathname)
   }
 
   getResumeData() {
@@ -27,6 +28,7 @@ class App extends Component {
       dataType: "json",
       cache: false,
       success: function(data) {
+        
         this.setState({ resumeData: data });
       }.bind(this),
       error: function(xhr, status, err) {
